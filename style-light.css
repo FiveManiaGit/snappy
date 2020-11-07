@@ -1,0 +1,233 @@
+*:focus { outline: none; }
+*::selection { color: unset; background-color: transparent; }
+
+body, html {
+  padding: 0;
+  margin: 0;
+
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: white;
+}
+
+body, input, button {
+  font-family: 'Roboto', 'Ubuntu', sans-serif;
+}
+
+.titleBar {
+  background-color: #eee;
+  color: black;
+
+  -webkit-app-region: drag;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: calc(100% - 10px);
+  padding: 5px;
+}
+
+.titleBarControls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  -webkit-app-region: no-drag;
+}
+
+.titleBarControls > button {
+  width: 14px;
+  height: 14px;
+
+  border: none;
+
+  border-radius: 100vw;
+
+  transition: 0.25s;
+}
+
+.titleBarControls > button {
+  margin: 0 2.5px;
+}
+
+.close { background-color: #ff4f4f; box-shadow: 0 0 0 1px inset #e74747; }
+.minimize { background-color: #ffaf4f; box-shadow: 0 0 0 1px inset #e69c42; }
+
+.bottomBar {
+  background-color: #222;
+  color: white;
+
+  font-size: 10px;
+
+  padding: 5px;
+
+  width: calc(100% - 10px);
+
+  transition: 0.25s;
+}
+
+#preview {
+  width: 72vw;
+  height: 72vh;
+
+  border: 1px solid black;
+
+  background-color: black;
+
+  border-radius: 5px;
+  
+  margin-top: 15px;
+}
+
+select, input {
+  padding: 5px 20px;
+
+  border-radius: 100vw;
+
+  background-color: #eee;
+  color: black;
+
+  border: none;
+
+  transition: background-color 0.25s;
+}
+
+button {
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 15px;
+  border: none;
+
+  transition: background-color 0.25s;
+}
+
+button.slim {
+  width: auto;
+  height: auto;
+
+  padding: 5px 25px;
+}
+
+.selected {
+  background-color: #ccc;
+}
+
+#record {
+  background-color: #4faf4f;
+  color: white;
+}
+
+#screenshot {
+  background-color: #4f4fdf;
+  color: white;
+}
+
+.recordIcon {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  border: 2px solid white;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoOptions, .photoOptions, .options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.videoOptions *, .photoOptions * {
+  margin: 0 5px;
+}
+
+.options { border-radius: 15px; }
+.options button { border-radius: 0; }
+
+#countdown {
+  background-color: #000d;
+  color: white;
+
+  font-size: 64px;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 50%;
+  top: -150%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  word-wrap: none;
+  flex-wrap: nowrap;
+
+  z-index: 2;
+}
+
+#modal {
+  background: #eee;
+  color: black;
+
+  font-size: 48px;
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  left: 50%;
+  top: -150%;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  padding: 25px 75px;
+
+  border-radius: 15px;
+
+  overflow: hidden;
+  word-wrap: none;
+  flex-wrap: nowrap;
+
+  z-index: 2;
+
+  box-shadow: 0 5px 15px #0002;
+}
+
+#theme { cursor: pointer; }

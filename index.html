@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snappy</title>
+
+  <link rel="stylesheet" href="style-light.css" id="stylesheet">
+</head>
+<body>
+  <div id="countdown"></div>
+  <div id="modal"></div>
+  <div class="app">
+    <video id="preview" autoplay muted></video>
+    <br>
+    <div class="videoOptions">
+      <button id="record"><i class="recordIcon"></i></button>
+      <select id="resolution"></select>
+      <select id="constraint"></select>
+    </div>
+    <div class="photoOptions" style="display: none;">
+      <button id="screenshot"><i data-feather="camera"></i></button>
+      <select id="presolution"></select>
+      <select id="pconstraint"></select>
+      <select id="psaveto"></select>
+    </div>
+    <div class="options">
+      <button class="slim selected" id="useVideo">Video</button>
+      <button class="slim" id="usePhoto">Photo</button>
+    </div>
+  </div>
+  <div class="bottomBar">
+    <span>
+      Snappy · With <b><i>s u f f e r i n g</i></b> by FiveMania
+    </span>
+    ·
+    <a id="theme"><u><b><i>change theme</i></b></u></a>
+  </div>
+
+  <script src="cdnpacks/anime.min.js"></script>
+  <script src="cdnpacks/feather.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
